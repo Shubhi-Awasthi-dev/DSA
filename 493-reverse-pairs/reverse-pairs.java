@@ -9,7 +9,6 @@ class Solution {
         int mid = (low + high) / 2;
         int count = mergeSort(nums, low, mid) + mergeSort(nums, mid + 1, high);
         
-        // Count cross pairs
         int j = mid + 1;
         for (int i = low; i <= mid; i++) {
             while (j <= high && (long) nums[i] > 2L * nums[j]) {
